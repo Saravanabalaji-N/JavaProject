@@ -16,7 +16,7 @@ public class LoginPassword {
 		System.out.println("enter your UserName :");
 		userName = sc.next();
 		while (!userName.matches(pattern)) {
-			System.out.println("Incorrect UserName:");
+			System.err.println("Incorrect UserName");
 			System.out.println("enter your UserName again:");
 			userName = sc.next();
 			s=true;
@@ -25,7 +25,7 @@ public class LoginPassword {
 		System.out.println("enter your Password :");
 		password = sc.next();
 		while (!password.matches(pattern2)) {
-			System.out.println("Incorrect UserName:");
+			System.err.println("Incorrect Password");
 			System.out.println("enter your Password again:");
 			password = sc.next();
 			s=true;
@@ -33,17 +33,37 @@ public class LoginPassword {
 	}
 	}
 	
+//	------------------Student Attendence----------------
+	
 	public void attendence() {
 		Scanner sc = new Scanner(System.in);
+
+		String year;
+		String department;
+		String pattern = "[1-4]";
+		System.out.println("Enter Your Year  ('1' or '2' or '3' or '4')");
+		year = sc.next();
+		while (!year.matches(pattern)) {
+			System.out.println("enter your Year again ('1' or '2' or '3' or '4')");
+			year = sc.next();
+		}
+		System.out.println("Enter Your Deparment ('CSE' or 'IT' or 'ECE')");
+		department = sc.next().toLowerCase();
+		while (!department.matches("cse") && !department.matches("it") && !department.matches("ece")) {
+			System.out.println("enter your Deparment again:");
+			department = sc.next().toLowerCase();
+		}
+		if (department.equals("cse")) {
+		Scanner se = new Scanner(System.in);
 		String name;
 		System.out.println("\n   -----Computer Science Students Details-----\n");
 		System.out.println("1.Saravana\n2.Naveen\n3.Akash");
 		System.out.println("\nenter your Name :");
-		name = sc.next().toLowerCase();
+		name = se.next().toLowerCase();
 		while (!name.equals("saravana")&&!name.equals("naveen")&&!name.equals("akash")) {
-			System.out.println("Incorrect Name:");
+			System.err.println("Incorrect Name:");
 			System.out.println("\nenter your Name again :");
-			name = sc.next().toLowerCase();
+			name = se.next().toLowerCase();
 		}
 		if(name.equals("saravana")) {
 			System.out.println("\nName     : Saravana\n"
@@ -64,6 +84,74 @@ public class LoginPassword {
 					         + "attendence : 98%");
 		}
 	}
+		
+		if (department.equals("it")) {
+			Scanner se = new Scanner(System.in);
+			String name;
+			System.out.println("\n   -----Information Technology Students Details-----\n");
+			System.out.println("1.Saravana\n2.Naveen\n3.Akash");
+			System.out.println("\nenter your Name :");
+			name = se.next().toLowerCase();
+			while (!name.equals("saravana")&&!name.equals("naveen")&&!name.equals("akash")) {
+				System.err.println("Incorrect Name:");
+				System.out.println("\nenter your Name again :");
+				name = se.next().toLowerCase();
+			}
+			if(name.equals("saravana")) {
+				System.out.println("\nName     : Saravana\n"
+						         + "Year       : 4-year\n"
+						         + "Department : Computer Science\n"
+						         + "attendence : 95%");
+			}
+			if(name.equals("naveen")) {
+				System.out.println("\nName     : Naveen\n"
+						         + "Year       : 4-year\n"
+						         + "Department : Computer Science\n"
+						         + "attendence : 92%");
+			}
+			if(name.equals("akash")) {
+				System.out.println("\nName     : Akash\n"
+						         + "Year       : 4-year\n"
+						         + "Department : Computer Science\n"
+						         + "attendence : 98%");
+			}
+		}
+		
+		if (department.equals("ece")) {
+			Scanner se = new Scanner(System.in);
+			String name;
+			System.out.println("\n   -----Electrical & Communication  Students Details-----\n");
+			System.out.println("1.Saravana\n2.Naveen\n3.Akash");
+			System.out.println("\nenter your Name :");
+			name = se.next().toLowerCase();
+			while (!name.equals("saravana")&&!name.equals("naveen")&&!name.equals("akash")) {
+				System.err.println("Incorrect Name:");
+				System.out.println("\nenter your Name again :");
+				name = se.next().toLowerCase();
+			}
+			if(name.equals("saravana")) {
+				System.out.println("\nName     : Saravana\n"
+						         + "Year       : 4-year\n"
+						         + "Department : Computer Science\n"
+						         + "attendence : 95%");
+			}
+			if(name.equals("naveen")) {
+				System.out.println("\nName     : Naveen\n"
+						         + "Year       : 4-year\n"
+						         + "Department : Computer Science\n"
+						         + "attendence : 92%");
+			}
+			if(name.equals("akash")) {
+				System.out.println("\nName     : Akash\n"
+						         + "Year       : 4-year\n"
+						         + "Department : Computer Science\n"
+						         + "attendence : 98%");
+			}
+		}
+	}
+	
+//	------------------------------Student Marks-----------------------------
+	
 	public void marks() {
 		
 		Scanner sc = new Scanner(System.in);
