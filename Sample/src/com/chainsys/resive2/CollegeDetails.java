@@ -29,15 +29,15 @@ public class CollegeDetails {
 		System.out.println("\nwhich record you need\n1.attendence\n2.marks");
 		System.out.println("Enter the Vaild input :");
 		record=sc.next().toLowerCase();
-		while (!record.matches("attendence") && !record.matches("marks")) {
+		while (!record.matches("1") && !record.matches("2")) {
 			System.out.println("enter the valid input:");
 			record = sc.next();
 		}
-			if(record.equals("attendence")) {
+			if(record.equals("1")) {
 				lg.attendence();
 			}
 			
-			if(record.equals("marks")) {
+			if(record.equals("2")) {
 				lg.marks();
 			}
 		
