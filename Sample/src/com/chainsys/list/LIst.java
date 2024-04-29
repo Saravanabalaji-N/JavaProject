@@ -1,6 +1,6 @@
 package com.chainsys.list;
 
-public class LIst {
+public class List {
 
 	public static void main(String[] args) {
 				ArrayList<Integer> numbers = new ArrayList<>();
