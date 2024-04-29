@@ -2,7 +2,15 @@ package com.chainsys.resive2;
 
 import java.util.Scanner;
 
-public class AdminManagement {
+
+interface Documents{
+	
+	public void adminManagement();
+	
+}
+
+public class AdminManagement implements Documents {
+	
 
 	public void adminManagement() {
 
@@ -14,4 +22,6 @@ public class AdminManagement {
 		eq.availability();
 
 	}
+	
+	
 }
